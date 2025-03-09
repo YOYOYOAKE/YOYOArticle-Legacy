@@ -2,8 +2,6 @@
 title: Node.js, NPM & NVM
 createTime: 2025/01/24 22:19:19
 permalink: /memo/nodejs/
-tags: 
-  - Node.js
 ---
 
 ## 1 `NVM`命令

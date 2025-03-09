@@ -17,4 +17,9 @@ config:
         icon: logos:nodejs-icon
         details: Node.js开箱、NPM换源、NVM命令
         link: ./nodejs.md
+      -
+        title: frp 内网穿透
+        icon: logos:github-icon
+        details: frp 安装、配置与管理
+        link: /memo/frp/
 ---
