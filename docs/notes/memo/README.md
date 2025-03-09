@@ -22,4 +22,9 @@ config:
         icon: logos:github-icon
         details: frp 安装、配置与管理
         link: /memo/frp/
+      -
+        title: Windows Terminal
+        icon: logos:terminal
+        details: Windows Terminal 配置与美化
+        link: /memo/wt/
 ---

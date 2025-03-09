@@ -33,5 +33,6 @@ next:
 <CardGrid>
   <LinkCard title="Node.js, NPM & NVM" href="/memo/nodejs/" icon="logos:nodejs-icon" />
   <LinkCard title="frp 内网穿透" href="/memo/frp/" icon="logos:github-icon" />
+  <LinkCard title="Windows Terminal" href="/memo/wt/" icon="logos:terminal" />
 </CardGrid>
 :::
