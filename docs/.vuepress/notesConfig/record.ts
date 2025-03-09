@@ -20,6 +20,7 @@ export default defineNoteConfig({
       text: 'Archive Two：求索',
       items: [
         '2025W9.md',
+        '2025W10.md',
       ]
     }
   ]
