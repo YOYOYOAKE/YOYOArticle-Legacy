@@ -32,5 +32,6 @@ next:
 ::: card title="备忘录" icon="fluent-color:document-folder-24"
 <CardGrid>
   <LinkCard title="Node.js, NPM & NVM" href="/memo/nodejs/" icon="logos:nodejs-icon" />
+  <LinkCard title="frp 内网穿透" href="/memo/frp/" icon="logos:github-icon" />
 </CardGrid>
 :::
