@@ -29,8 +29,8 @@ export const navbar = defineNavbarConfig([
   {
     text: '知识库',
     items: [
-      { text: '计算机图形学', link: '/graphics/README.md' },
-      { text: 'MySQL', link: '/mysql/README.md' },
+      { text: '现代计算机图形学入门', link: '/graphics/README.md' },
+      { text: '关系数据库与MySQL', link: '/mysql/README.md' },
     ],
     icon: 'material-symbols:book-4-spark-rounded'
   },

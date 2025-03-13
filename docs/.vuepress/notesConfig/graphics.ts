@@ -6,6 +6,13 @@ export default defineNoteConfig({
   sidebar: [
     'README.md',
     {
+      text: '笔记',
+      items: [
+        'Part-1.md',
+        'Part-2.md',
+      ]
+    }, 
+    {
       text: '课堂笔记',
       items: [
         'Lecture-01.md',
