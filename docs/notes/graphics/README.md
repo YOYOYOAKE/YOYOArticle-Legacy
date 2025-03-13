@@ -23,9 +23,5 @@ GAMES101 是国内著名的现代计算机图形学公开课。这门课程全�
 
 <CardGrid>
   <LinkCard title="Part 1 变换与齐次坐标" href="/graphics/p1/" />
-  <LinkCard title="Part 2 光栅化成像与抗锯齿" href="/graphics/p2/" />
-  <LinkCard title="Part 3 深度缓冲" href="/graphics/p3/" />
-  <LinkCard title="Part 4 几何表示" href="/graphics/p4/" />
-  <LinkCard title="Part 5 光线追踪" href="/graphics/p5/" />
-  <LinkCard title="Part 6 材质" href="/graphics/p6/" />
+  <LinkCard title="Part 2 光栅化成像" href="/graphics/p2/" />
 </CardGrid>
