@@ -1,5 +1,5 @@
 ---
-title: Connect from Everywhere： frp 内网穿透
+title: frp 内网穿透
 createTime: 2025/02/17 19:46:57
 permalink: /memo/frp/
 ---
