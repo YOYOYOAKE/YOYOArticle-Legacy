@@ -24,4 +24,5 @@ GAMES101 是国内著名的现代计算机图形学公开课。这门课程全�
 <CardGrid>
   <LinkCard title="Part 1 变换与齐次坐标" href="/graphics/p1/" />
   <LinkCard title="Part 2 光栅化成像" href="/graphics/p2/" />
+  <LinkCard title="Part 3 光照与着色" href="/graphics/p3/" />
 </CardGrid>
