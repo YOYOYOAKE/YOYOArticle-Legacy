@@ -16,7 +16,7 @@ config:
         title: Node.js, NPM & NVM
         icon: logos:nodejs-icon
         details: Node.js开箱、NPM换源、NVM命令
-        link: ./nodejs.md
+        link: /memo/nodejs/
       -
         title: frp 内网穿透
         icon: logos:github-icon
@@ -27,4 +27,9 @@ config:
         icon: logos:terminal
         details: Windows Terminal 配置与美化
         link: /memo/wt/
+      -
+        title: Linux 常用命令集
+        icon: logos:debian
+        details: 在 Debian / Ubuntu 中的常用命令
+        link: /memo/linux/
 ---
