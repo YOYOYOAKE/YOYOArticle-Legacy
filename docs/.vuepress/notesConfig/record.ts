@@ -21,6 +21,7 @@ export default defineNoteConfig({
       items: [
         '2025W9.md',
         '2025W10.md',
+        '2025W11.md',
       ]
     }
   ]
