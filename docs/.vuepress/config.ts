@@ -22,7 +22,14 @@ export default defineUserConfig({
     // 添加您的部署域名
     hostname: 'https://www.yoake.cc',
     footer: {
-      message: "Copyright ©️ 2025 YOAKE | Powered by VuePress & vuepress-theme-plume",
+      message: `
+        <span>
+          Copyright ©️ 2024 - 2025 YOAKE | Powered by VuePress & vuepress-theme-plume
+        </span>
+        <br/>
+        <span style="font-size: 10px;">
+          冀 ICP 备 2025102465号-1 | 京公网安备 11011502038573 号
+        </span>`,
     },
 
     plugins: {
