@@ -24,11 +24,11 @@ export default defineUserConfig({
     footer: {
       message: `
         <span>
-          Copyright ©️ 2024 - 2025 YOAKE | Powered by VuePress & vuepress-theme-plume
+          Copyright ©️ 2024 - 2025 YOAKE | Powered by <a href="https://v2.vuepress.vuejs.org/">VuePress</a> & <a href="https://theme-plume.vuejs.press/">Plume</a>
         </span>
         <br/>
         <span style="font-size: 10px;">
-          冀 ICP 备 2025102465号-1 | 京公网安备 11011502038573 号
+          冀 ICP 备 2025102465号-1 · 京公网安备 11011502038573 号
         </span>`,
     },
 
