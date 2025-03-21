@@ -25,4 +25,6 @@ GAMES101 是国内著名的现代计算机图形学公开课。这门课程全�
   <LinkCard title="Part 1 变换与齐次坐标" href="/graphics/p1/" />
   <LinkCard title="Part 2 光栅化成像" href="/graphics/p2/" />
   <LinkCard title="Part 3 光照与着色" href="/graphics/p3/" />
+  <LinkCard title="Part 4 模型几何表示" href="/graphics/p4/" />
+  <LinkCard title="Part 5 贝塞尔曲线和贝塞尔曲面" href="/graphics/p5/" />
 </CardGrid>

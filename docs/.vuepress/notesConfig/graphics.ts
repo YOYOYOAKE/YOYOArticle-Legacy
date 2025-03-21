@@ -4,12 +4,15 @@ export default defineNoteConfig({
   dir: 'graphics',
   link: '/graphics/',
   sidebar: [
-    'README.md',
     {
+      text: '现代计算机图形学入门',
+      link: 'README.md',
       items: [
         'Part-1.md',
         'Part-2.md',
         'Part-3.md',
+        'Part-4.md',
+        'Part-5.md',
       ]
     }, 
   ]
