@@ -2,9 +2,8 @@ import { defineClientConfig } from 'vuepress/client'
 // import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 // import CustomComponent from './theme/components/Custom.vue'
 
-// import './theme/styles/custom.css'
-import './styles/custom.css'
-import './styles/image.css'
+import './theme/styles/custom.css'
+import './theme/styles/image.css'
 
 export default defineClientConfig({
   enhance({ app }) {
