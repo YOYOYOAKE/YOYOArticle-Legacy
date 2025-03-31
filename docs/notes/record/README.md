@@ -17,6 +17,7 @@ AJohn一直催我写周记，那他自己为什么不写？
   <LinkCard title="2025W10 蓼茸蒿笋试春盘" href="/record/2025w10/" />
   <LinkCard title="2025W11 山要人来 人要山无意" href="/record/2025w11/" />
   <LinkCard title="2025W12 满城春色宫墙柳" href="/record/2025w12/" />
+  <LinkCard title="2025W13 乍暖还寒时候 最难将息" href="/record/2025w13/" />
 </CardGrid>
 :::
 
