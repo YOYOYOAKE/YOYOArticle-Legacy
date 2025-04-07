@@ -50,7 +50,10 @@ export default defineUserConfig({
           'c++',
           'json',
           'powershell',
-          'toml'],
+          'toml',
+          'yml',
+          'yaml',
+        ],
       },
 
       /**
