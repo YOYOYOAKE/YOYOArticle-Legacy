@@ -1,7 +1,7 @@
 import { defineNoteConfig } from "vuepress-theme-plume"
 
 export default defineNoteConfig({
-  dir: 'graphics',
+  dir: 'repos/graphics',
   link: '/graphics/',
   sidebar: [
     {

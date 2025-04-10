@@ -1,7 +1,7 @@
 import { defineNoteConfig } from "vuepress-theme-plume"
 
 export default defineNoteConfig({
-  dir: 'mysql',
+  dir: 'repos/mysql',
   link: '/mysql/',
   sidebar: [
     'README.md',
