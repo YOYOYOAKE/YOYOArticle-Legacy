@@ -32,4 +32,9 @@ config:
         icon: logos:debian
         details: 在 Debian / Ubuntu 中的常用命令
         link: /memo/linux/
+      -
+        title: Windows 注册表文件
+        icon: logos:microsoft-windows-icon
+        details: 一些可能用得到的注册表文件
+        link: /memo/reg/
 ---
