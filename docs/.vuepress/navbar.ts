@@ -31,7 +31,7 @@ export const navbar = defineNavbarConfig([
     items: [
       { text: '现代计算机图形学入门', link: '/graphics/README.md' },
       { text: '关系数据库与MySQL', link: '/mysql/README.md' },
-      { text: 'Java 数据结构', link: '/java/README.md' },
+      { text: 'Java', link: '/java/README.md' },
     ],
     icon: 'material-symbols:book-4-spark-rounded'
   },

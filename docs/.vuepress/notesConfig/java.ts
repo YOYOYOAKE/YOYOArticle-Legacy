@@ -5,7 +5,7 @@ export default defineNoteConfig({
   link: '/java/',
   sidebar: [
     {
-      text: 'Java 数据结构',
+      text: 'Java',
       link: 'README.md',
       items: [
         'Part-01.md',
