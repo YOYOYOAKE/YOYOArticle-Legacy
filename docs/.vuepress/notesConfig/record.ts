@@ -28,6 +28,8 @@ export default defineNoteConfig({
             '2025W12.md',
             '2025W13.md',
             '2025W14.md',
+            '2025W15.md',
+            '2025W16.md',
           ]
         }
       ]
