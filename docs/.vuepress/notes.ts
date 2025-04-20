@@ -3,6 +3,7 @@ import { defineNotesConfig } from 'vuepress-theme-plume'
 import graphics from './notesConfig/graphics'
 import mysql from './notesConfig/mysql'
 import record from './notesConfig/record'
+import java from './notesConfig/java'
 
 export const notes = defineNotesConfig({
   dir: 'notes',
@@ -10,6 +11,7 @@ export const notes = defineNotesConfig({
   notes: [
     graphics,
     mysql,
-    record
+    record,
+    java
   ],
 })
