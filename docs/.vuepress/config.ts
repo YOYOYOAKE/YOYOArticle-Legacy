@@ -53,6 +53,7 @@ export default defineUserConfig({
           'toml',
           'yml',
           'yaml',
+          'java',
         ],
       },
 
