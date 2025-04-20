@@ -9,6 +9,7 @@ export default defineNoteConfig({
       link: 'README.md',
       items: [
         'Part-01.md',
+        'Part-02.md',
       ]
     }, 
   ]
