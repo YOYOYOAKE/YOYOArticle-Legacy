@@ -176,3 +176,31 @@ public static boolean equals(Object[] a, Object[] a2) {
 
 最后检查数组中对应元素是否相同。
 
+### 4.4 数组的排序
+
+`Arrays`工具类中提供了`.sort()`方法用于判断两数组是否相等。
+
+```java
+String[] arr = new String[] {"zhao", "qian", "sun", "li"};
+Arrays.sort(arr);
+System.out.println(Arrays.toString(arr)); // [li, qian, sun, zhao]
+```
+
+值得注意的是，`.sort()`方法会改变原数组，因此需要谨慎使用。
+
+### 4.5 数组的检索
+
+如果要从数组中查找某个特定元素的索引的话，通常只能从 0 开始依次查找。
+
+但是在排序之后，就可以使用`Arrays`工具类中的`.binarySearch()`方法进行二分查找了。
+
+```java
+String[] arr = new String[] {"zhao", "qian", "sun", "li"};
+Arrays.sort(arr);
+System.out.println(Arrays.toString(arr)); // [li, qian, sun, zhao]
+
+int indexQian = Arrays.binarySearch(arr, "qian");  
+System.out.println(indexQian); // 1
+```
+
+注意，在使用`.binarySearch()`前一定要进行排序，否则查找结果是不确定的。
