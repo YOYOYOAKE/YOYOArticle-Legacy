@@ -79,7 +79,7 @@ for(i = 0; i<=10; i++){
 }
 ```
 
-除此之外，对于数组或集合，Java 有更方便的语法：
+除此之外，对于数组或集合，Java 有更方便的 for-each 语法：
 
 ```java
 for(int number : numberList){  
