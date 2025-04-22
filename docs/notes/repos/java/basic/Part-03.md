@@ -1,7 +1,7 @@
 ---
 title: Part 3 Java 流程控制
 createTime: 2025/04/20 16:20:52
-permalink: /java/03/
+permalink: /java/basic/03/
 ---
 
 所有编程语言中都有流程控制，包括顺序、分支、循环。Java 在这一方面和 C/C++ 基本一致。

@@ -1,7 +1,7 @@
 ---
 title: Part 4 Java 数组
 createTime: 2025/04/21 08:36:41
-permalink: /java/04/
+permalink: /java/basic/04/
 ---
 
 ## 1 数组的声明和初始化

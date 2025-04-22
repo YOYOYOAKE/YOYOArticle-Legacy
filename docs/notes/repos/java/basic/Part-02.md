@@ -1,7 +1,7 @@
 ---
 title: Part 2 Java 运算符
 createTime: 2025/04/20 15:57:06
-permalink: /java/02/
+permalink: /java/basic/02/
 ---
 
 Java 运算符可分为六类：算术运算符、关系运算符、位运算符、逻辑运算符、赋值运算符、三元运算符。

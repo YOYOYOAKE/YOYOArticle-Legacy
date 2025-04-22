@@ -1,7 +1,7 @@
 ---
 title: Part 1 Java 数据类型
 createTime: 2025/04/20 14:33:52
-permalink: /java/01/
+permalink: /java/basic/01/
 ---
 
 与 JavaScript 和 Python 不同，Java是一种静态类型语言。这就意味着在声明变量时需要同时声明其变量类型。

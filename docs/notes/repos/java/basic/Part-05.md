@@ -1,7 +1,7 @@
 ---
 title: Part 5 Java 字符串
 createTime: 2025/04/22 14:43:41
-permalink: /java/05/
+permalink: /java/basic/05/
 ---
 
 ## 1 String 类
