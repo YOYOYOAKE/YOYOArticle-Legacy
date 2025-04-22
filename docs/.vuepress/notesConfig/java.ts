@@ -12,6 +12,7 @@ export default defineNoteConfig({
         'Part-02.md',
         'Part-03.md',
         'Part-04.md',
+        'Part-05.md',
       ]
     }, 
   ]
