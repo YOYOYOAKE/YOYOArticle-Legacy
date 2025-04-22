@@ -8,11 +8,16 @@ export default defineNoteConfig({
       text: 'Java',
       link: 'README.md',
       items: [
-        'Part-01.md',
-        'Part-02.md',
-        'Part-03.md',
-        'Part-04.md',
-        'Part-05.md',
+        {
+          text: 'Java 语法基础',
+          items: [
+            'basic/Part-01.md',
+            'basic/Part-02.md',
+            'basic/Part-03.md',
+            'basic/Part-04.md',
+            'basic/Part-05.md',
+          ]
+        }
       ]
     }, 
   ]
