@@ -14,4 +14,5 @@ Java 作为世界上最流行的编程语言之一，在 Web 开发中有着举�
 
 <CardGrid>
   <LinkCard title="Char.1 Java 语法基础" href="/java/basic/01/" />
+  <LinkCard title="Char.2 Java 面向对象编程" href="/java/oop/01/" />
 </CardGrid>
