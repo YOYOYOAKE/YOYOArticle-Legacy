@@ -23,6 +23,7 @@ export default defineNoteConfig({
           items: [
             'oop/Part-01.md',
             'oop/Part-02.md',
+            'oop/Part-03.md',
           ]
         }
       ]
