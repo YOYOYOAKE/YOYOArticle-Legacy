@@ -19,7 +19,7 @@ export default defineNoteConfig({
           ]
         },
         {
-          text: 'Char.2 Java 面向对象',
+          text: 'Char.2 Java 面向对象编程',
           items: [
             'oop/Part-01.md',
             'oop/Part-02.md',
@@ -27,6 +27,7 @@ export default defineNoteConfig({
             'oop/Part-04.md',
             'oop/Part-05.md',
             'oop/Part-06.md',
+            'oop/Part-07.md',
           ]
         }
       ]

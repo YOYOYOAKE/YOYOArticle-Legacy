@@ -1,136 +1,26 @@
 ---
-title: Part 3 方法
-createTime: 2025/04/23 09:24:07
+title: Part 3 继承
+createTime: 2025/04/24 19:00:34
 permalink: /java/oop/03/
 ---
 
-## 1 实例方法
+## 1 `extends`关键字
 
-类中最普通的方法就是实例方法。
+在[封装](/java/oop/02/)一节中我们提到了**子类**的概念，并第一次出现了`extends`关键字。
 
-```java
-public class Demo {
-    // 一个非常简单的实例方法
-    int add(int a, int b){
-        return a + b;
-    }
-}
+### 1.1 基本的继承
 
-public class Main {
-    public static void main(String[] args) {
-        // 将类实例化后才能调用实例方法
-        Demo demo = new Demo();
-        int res = demo.add(10, 20);
-        System.out.println(res); // 66
-    }
-}
-```
+**子类**使用`extends`关键字**父类**中**继承**，获得父类所有的成员变量和方法。
 
-## 2 Getter 和 Setter
-
-Getter 和 Setter 是一类特殊的实例方法。
-
-在[成员变量](/java/oop/02/#_1-成员变量)中提到，为了数据安全、不被随意篡改，一般情况下将成员变量设为私有，而使用Getter和Setter对外暴露这些成员变量。
-
-被`private`关键字修饰的变量（方法）只能在类的内部被访问（私有），被`public`关键字修饰的变量（方法）在任何地方都可以被访问。
+与此同时，子类还可以拥有自己的成员变量和成员方法。
 
 ```java
-public class Demo {
-    // 私有成员变量
-    private int number;
-
-    // Getter
-    public int getNumber() {
-        return number;
-    }
-
-    // Setter
-    public void setNumber(int number) {
-        this.number = number; // 这里的 this 指代当前实例，先按下不表
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Demo demo = new Demo();
-
-        // 直接访问私有成员变量
-        System.out.println(demo.number); // 编译不通过，number 在 Demo 中是 private 访问控制
-
-        // 使用 Getter 访问
-        System.out.println(demo.getNumber()); // 666
-
-        // 使用 Setter 修改值
-        demo.setNumber(888);
-        System.out.println(demo.getNumber()); // 888
-    }
-}
-
-```
-
-## 3 构造方法
-
-构造方法是一种特殊的方法。当一个类被实例化时，构造方法被调用并返回一个对象。只有在构造方法被调用的时候，对象才会被分配内存空间。
-
-每次使用`new`关键字创建对象的时候，构造方法至少会被调用一次。
-
-构造方法的名字必须与类名相同，且没有返回值（包括`void`）。
-
-```java
-public class Demo {
-    public Demo(){
-        System.out.println("构造方法被调用");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Demo demo = new Demo(); // 构造方法被调用
-    }
-}
-```
-
-和普通方法一样，构造方法也可以传入参数。
-
-### 3.1 无参构造方法
-
-当使用`new`关键字创建对象时，如果没有传入参数，则会调用无参构造方法，也被称为默认构造方法。
-
-通常情况下，无参构造方法是可以缺省不写的。开发者并不需要显式的声明无参构造方法，编译器会自动生成。
-
-如果类中有成员变量，那么无参构造方法生成的对象中，成员变量都为对应数据类型的默认值。
-
-```java
-public class Demo {
+// Base.java
+// 父类`Base`
+public class Base {
     private int a;
 
-    public int getA() {
-        return a;
-    }
-
-    public void setA(int a) {
-        this.a = a;
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Demo demo = new Demo();
-        System.out.println(demo.getA()); // 0
-    }
-}
-```
-
-### 3.2 有参构造方法
-
-和无参构造方法类似，有参构造方法可以把成员变量初始化为我们想要的值。
-
-```java
-public class Demo {
-    private int a;
-
-    // 有参构造方法
-    public Demo(int a) {
+    public Base(int a) {
         this.a = a;
     }
 
@@ -142,33 +32,231 @@ public class Demo {
         this.a = a;
     }
 }
+```
 
-public class Main {
-    public static void main(String[] args) {
-        // 为有参构造方法传入参数
-        Demo demo = new Demo(666);
-        System.out.println(demo.getA()); // 666
+```java
+// Upper.java
+// 子类`Upper`
+public class Upper extends Base {
+    private int b;
+    
+    public void aSpecialMethod(){
+        System.out.println("子类方法");
+    }
+    
+    public Upper(int a, int b) {
+        super(a);
+        this.b = b;
+    }
+
+    public int getB() {
+        return b;
+    }
+
+    public void setB(int b) {
+        this.b = b;
     }
 }
 ```
 
-## 4 静态方法
-
-与[静态变量](/java/oop/02/#_4-静态变量)一样，被`static`关键字修饰的方法称为静态方法，它们也能直接通过类来访问，而不用实例化。
-
-静态方法通常用在工具类中。
+我们实例化`Upper`子类，访问其成员变量和方法：
 
 ```java
-public class Demo {
-    public static int add(int a, int b){
-        return a + b;
-    }
-}
-
 public class Main {
     public static void main(String[] args) {
-        int res = Demo.add(10, 20);
-        System.out.println(res); // 30
+        Upper upper = new Upper(1, 20);
+        System.out.println(upper.getA()); // 1
+        System.out.println(upper.getB()); // 20
+        upper.aSpecialMethod(); // 子类方法
     }
+}
+```
+
+### 1.2 继承的注意事项
+
+父类可以拥有多个子类：
+
+```java
+public class Base {
+    // ...
+}
+
+public class Upper extends Base {
+    // ...
+}
+
+public class AnotherUpper extends Base {
+    // ...
+}
+```
+
+子类也可以拥有子类：
+
+```java
+public class Base {
+    // ...
+}
+
+public class Upper extends Base {
+    // ...
+}
+
+public class UpUpper extends Upper {
+    // ...
+}
+```
+
+但是子类只能继承一个父类：
+
+```java
+public class Base {
+    // ...
+}
+
+public class AnotherBase {
+    // ...
+}
+
+public class Upper extends Base, AnotherBase { // ERROR: 类不能扩展多个类
+    // ...
+}
+```
+
+### 1.3 不可继承的类
+
+`final`关键字修饰的类不能被继承。
+
+```java
+public final class Base {
+    // ...
+}
+
+public class Upper extends Base { // ERROR: 无法继承自 final 类 'Base'
+    // ...
+}
+```
+
+不过，类是`final`的，但其中的成员变量和方法并不是。我们依然可以通过 getter/setter 访问其成员变量和方法。
+
+## 2 方法重写
+
+子类可以重写继承的父类方法。重写的方法必须具有相同的方法名和参数，并使用`@Override`注解（可以不写，但最好还是写）。
+
+```java
+public class Base {
+    public void aSpecialMethod(){
+        System.out.println("父类方法");
+    }
+}
+```
+
+```java
+public class Upper extends Base {
+    @Override
+    public void aSpecialMethod(){
+        System.out.println("子类方法");
+    }
+}
+```
+
+分别实例化并调用`aSpecialMethod()`。
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Base base = new Base();
+        Upper upper = new Upper();
+
+        base.aSpecialMethod(); // 父类方法
+        upper.aSpecialMethod(); // 子类方法
+    }
+}
+```
+
+还有一些细节：
+
+- 只能重写从父类继承的方法。`privite`方法不会被继承，因此也不能被重写。
+- `final` `static`方法无法重写。
+- 重写的方法必须具有相同的参数列表和返回值。
+- 重写的方法不能使用更严格的访问控制修饰符。
+- 构造方法无法重写。
+- 抽象方法必须被重写。
+
+## 3 `super`关键字
+
+在[基本的继承](#_1-1-基本的继承)第一次出现了`super`关键字，它与`this`相似，不过用来指代父类对象。
+
+### 3.1 区分子类和父类
+
+如果子类和父类具有相同命名的成员变量和成员方法，就需要使用`super`加以区分。
+
+```java
+public class Base {
+    // ...
+    protected int a;
+
+    public Base(int a) {
+        this.a = a;
+    }
+    // ...
+}
+```
+
+```java
+public class Upper extends Base {
+    // ...
+    private int a;
+
+    public int getA() {
+        return a;
+    }
+
+    public int getBaseA(){
+        System.out.println("通过`super`关键字区分父类和子类变量");
+        return super.a;
+    }
+    // ...
+}
+```
+
+### 3.2 调用父类方法
+
+```java
+public class Base {
+    // ...
+    private int a;
+
+    public int getA() {
+        return a;
+    }
+    // ...
+}
+```
+
+```java
+public class Upper extends Base {
+    // ...
+    private int a;
+
+    public int getBaseA() {
+        System.out.println("通过`super`关键字访问父类方法");
+        return super.getA();
+    }
+    // ...
+}
+```
+
+### 3.3 调用父类的构造方法
+
+子类在实例化的同时实例化父类。
+
+```java
+public class Upper extends Base {
+    // ...
+    public Upper(int a, int a2) {
+        super(a);
+        this.a = a2;
+    }
+    // ...
 }
 ```

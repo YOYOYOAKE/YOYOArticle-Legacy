@@ -1,143 +1,210 @@
 ---
-title: Part 5 类的继承
-createTime: 2025/04/23 14:42:09
+title: Part 5 抽象
+createTime: 2025/04/24 19:01:26
 permalink: /java/oop/05/
 ---
 
-铺垫了好多，终于到继承了。
+## 1 抽象类与抽象方法
 
-继承允许我们从一个已有的类中创造一个新的类。即子类继承父类。
+### 1.1 抽象类
 
-子类除了拥有父类的全部成员变量和方法，还拥有自己的成员变量和方法。
+所有对象都是由类描述的，但并不是所有的类都是用来描述对象的。如果一个类的信息不足以描述对象，那么就称这个类为**抽象类**。
 
-## 1 继承的语法
-
-使用`extends`关键字声明继承。
+在 Java 中使用`abstract`关键字声明一个抽象类。抽象类通常用`Abstract`开头命名。
 
 ```java
-class Base {
-    
-}
-
-// 类 Upper 继承自类 Base
-class Upper extends Base {
-    
+public abstract class AbstractPrinter {
+    public void print() {
+        System.out.println("这是一台打印机");
+    }
 }
 ```
 
-父类可以被多个子类继承。
+因为抽象类中的信息不足以描述一个具体的对象，因此抽象类无法被实例化。
 
 ```java
-class Base {
-
-}
-
-class UpperA extends Base {
-
-}
-
-class UpperB extends Base {
-    
-}
-```
-
-子类也可以被继承。
-
-```java
-class Base {
-
-}
-
-class Upper extends Base {
-
-}
-
-class UpUpper extends Upper {
-
-}
-```
-
-但是子类只能继承一个父类，不能同时继承两个父类。
-
-## 2 `super`关键字
-
-我们可以通过`super`关键字来引用当前类的父类。
-
-### 2.1 子类的有参构造
-
-子类是不继承父类的构造方法。在子类的有参构造方法中，必须使用`super`实现对父类的有参构造（如果父类有成员变量的话）。
-
-```java
-// 父类的有参构造为成员变量`a`赋值
-class Base {
-    private int a;
-
-    public Base(int a) {
-        this.a = a;
-    }
-}
-
-// 子类继承父类的成员变量`a`
-class Upper extends Base {
-    // 子类自身有一个成员变量`b`
-    private int b;
-    
-    // 子类的构造方法
-    public Upper(int a, int b) {
-        // 使用`super()`访问父类的有参构造方法，为父类的成员变量赋值
-        super(a);
-        // 为自己的成员变量赋值
-        this.b =b;
-    }
-}
-```
-### 2.2 访问父类的成员变量和方法
-
-```java
-class Base {
-    private int a;
-
-    public Base(int a) {
-        this.a = a;
-    }
-
-    public int getA() {
-        return a;
-    }
-}
-
-class Upper extends Base {
-    private int b;
-
-    public Upper(int a, int b) {
-        super(a);
-        this.b = b;
-    }
-
-    // 这里使用了`super`关键字访问父类的`getA()`方法
-    public void getAB() {
-        System.out.println(super.getA());
-        System.out.println(b);
-        return;
-    }
-}
-
 public class Main {
     public static void main(String[] args) {
-        Upper upper = new Upper(666,888);
-        upper.getAB(); // 666 888
+        AbstractPrinter printer = new AbstractPrinter(); // ERROR: 'Printer' 为 abstract；无法实例化
     }
 }
 ```
 
-## 3 `final`关键字
+抽象类只能被继承后实例化。
 
-`final`关键字可用来修饰类、变量、方法。
+```java
+public class ColorPrinter extends AbstractPrinter {
+    // ...
+}
+```
 
-被`final`修饰的类不能被继承。
+```java
+public class Main {
+    public static void main(String[] args) {
+        Printer printer = new ColorPrinter();
+        printer.print(); // 这是一台打印机
+    }
+}
+```
 
-被`final`修饰的方法不能被子类重写。
+### 1.2 抽象方法
 
-被`final`修饰的变量不能被再次修改。
+如果你想设计这样一个类，该类包含一个特殊的成员方法，该方法在父类中没有具体实现，而由它的子类确定，那么你可以在父类用`abstract`来声明一个抽象方法。
 
-但是被`final`修饰的类，其成员变量和成员方法不是 final 的。
+抽象方法和普通方法相似，都有返回值类型、方法名、参数，不同的是抽象方法没有方法体。
+
+我们把`Printer`中的`print()`方法改为抽象方法，并在子类`ColorPrinter`中实现。
+
+```java
+public abstract class AbstractPrinter {
+    public abstract void print();
+}
+```
+
+```java
+public class ColorPrinter extends AbstractPrinter {
+    @Override
+    public void print() {
+        System.out.println("这是一台彩色打印机");
+    }
+}
+```
+
+所有的抽象方法必须在子类中重写，除非子类也是抽象类。
+
+```java
+public class LegacyPrinter extends Printer { // ERROR: 类“LegacyPrinter”必须声明为抽象，或为实现“Printer”中的抽象方法“print()”
+    // 不实现`print()`抽象方法
+}
+```
+
+```java
+public abstract class AbstractLegacyPrinter extends Printer {
+    // 不实现`print()`抽象方法
+}
+```
+
+抽象类中不一定包含抽象方法，但是有抽象方法的类必定是抽象类。
+
+构造方法、静态方法不能声明为抽象方法。
+
+## 2 接口
+
+接口是一系列抽象方法的集合。一个类通过**实现**接口的方式，从而来**实现**接口的抽象方法。
+
+类描述对象的属性和方法而接口则包含类要实现的方法。除非实现接口的类是抽象类，否则该类要定义接口中的所有方法。
+
+### 2.1 接口的声明与实现
+
+使用`interface`来声明一个接口，通常接口命名以`I`开头。
+
+接口是天然抽象的，因此声明接口时不必使用`abstract`。
+
+接口中的方法也都是抽象的，因此声明方法时也不需要`abstract`关键字。
+
+接口中的方法都是公有的，因此`public`也可以缺省。并且不能使用其他的修饰符控制权限。
+
+```java
+public interface IPrinter {
+    void print();
+}
+```
+
+然后使用`implements`来把这个接口实现为一个类。同样地，除非你实现的是一个抽象类，否则必须重写接口中的所有方法。
+
+```java
+public class Printer implements IPrinter {
+    @Override
+    public void print(){
+        System.out.println("这是一台打印机");
+    };
+}
+```
+
+### 2.2 接口的继承
+
+一个类能继承另一个类，一个接口也能继承另一个接口。同样使用`extends`关键字。
+
+继承的接口拥有被继承的接口的所有抽象方法。
+
+```java
+public interface IColorPrinter extends IPrinter {
+    void ColorfulPrint();
+}
+```
+
+```java
+public class ColorPrinter implements IColorPrinter {
+    // 重写接口`IPrinter`的方法
+    @Override
+    public void print() {
+        System.out.println("这是一台打印机");
+    }
+
+    // 重写接口`IColorPrinter`的方法
+    @Override
+    public void ColorfulPrint() {
+        System.out.println("这还是一台彩色打印机");
+    }
+}
+```
+
+与类不同，一个接口可以继承多个接口，继承的接口拥有所有被继承的接口的所有抽象方法。
+
+```java
+public interface IBase {
+    void baseMethod();
+}
+```
+
+```java
+public interface IAnotherBase {
+    void anotherBaseMethod();
+}
+```
+
+```java
+public interface IUpper extends IBase, IAnotherBase {
+    void upperMethod();
+}
+```
+
+```java
+public class Upper implements IUpper{
+    @Override
+    public void baseMethod() {
+        // ...
+    }
+
+    @Override
+    public void anotherBaseMethod() {
+        // ...
+    }
+
+    @Override
+    public void upperMethod() {
+        // ...
+    }
+}
+```
+
+### 2.3 在接口中声明变量
+
+只能声明常量字段，这些字段隐式地为`public static final`，并且必须初始化。
+
+```java
+interface Base {
+    int number = 666;
+}
+```
+
+## 3 抽象类与接口的区别
+
+- 抽象类可以包含抽象方法，也可以包含具体方法。接口只能包含抽象方法，除非是默认方法或者静态方法。
+- 抽象类可以有成员变量，但接口只能声明`public static final`的变量。
+- 抽象类有构造方法，而接口无构造方法。
+- 抽象类只能单继承，而接口可以多继承。
+
+抽象类更适合用来描述具有共同属性或行为的类的共性，并提供部分实现。
+
+接口更适合用于定义类应该具备的行为，但不关心具体如何实现，尤其适合解决多继承问题。
