@@ -11,25 +11,25 @@ export default defineNoteConfig({
         {
           text: 'Archive One：初试',
           items: [
-            '2025W1.md',
-            '2025W2.md',
-            '2025W3.md',
-            '2025W4-6.md',
-            '2025W7.md',
-            '2025W8.md'
+            'arc-01/2025W1.md',
+            'arc-01/2025W2.md',
+            'arc-01/2025W3.md',
+            'arc-01/2025W4-6.md',
+            'arc-01/2025W7.md',
+            'arc-01/2025W8.md'
           ]
         },
         {
           text: 'Archive Two：求索',
           items: [
-            '2025W9.md',
-            '2025W10.md',
-            '2025W11.md',
-            '2025W12.md',
-            '2025W13.md',
-            '2025W14.md',
-            '2025W15.md',
-            '2025W16.md',
+            'arc-02/2025W9.md',
+            'arc-02/2025W10.md',
+            'arc-02/2025W11.md',
+            'arc-02/2025W12.md',
+            'arc-02/2025W13.md',
+            'arc-02/2025W14.md',
+            'arc-02/2025W15.md',
+            'arc-02/2025W16.md',
           ]
         }
       ]
