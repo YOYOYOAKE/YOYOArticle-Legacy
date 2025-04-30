@@ -31,6 +31,12 @@ export default defineNoteConfig({
             'arc-02/2025W15.md',
             'arc-02/2025W16.md',
           ]
+        },
+        {
+          text: 'Archive Three：前路',
+          items: [
+            'arc-03/2025W17.md',
+          ]
         }
       ]
     },
