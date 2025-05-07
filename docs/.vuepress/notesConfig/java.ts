@@ -29,7 +29,13 @@ export default defineNoteConfig({
             'oop/Part-06.md',
             'oop/Part-07.md',
           ]
-        }
+        },
+        {
+          text: 'Char.3 Java 容器',
+          items: [
+            'collections/Part-01.md',
+          ]
+        },
       ]
     }, 
   ]
