@@ -11,7 +11,13 @@ AJohn一直催我写周记，那他自己为什么不写？
 
 所以希望在365天后，下方的列表能集齐52条吧~
 
-::: card title="Archive Two：求索" icon="fluent-color:book-open-24"
+::: card title="Archive Three：前路" icon="fluent-color:book-open-24"
+<CardGrid>
+  <LinkCard title="2025W17" href="/record/2025w17/" />
+</CardGrid>
+:::
+
+::: card title="Archive Two：求索" icon="fluent-color:book-star-24"
 <CardGrid>
   <LinkCard title="2025W9 雪沫乳花浮午盏" href="/record/2025w9/" />
   <LinkCard title="2025W10 蓼茸蒿笋试春盘" href="/record/2025w10/" />
@@ -19,6 +25,8 @@ AJohn一直催我写周记，那他自己为什么不写？
   <LinkCard title="2025W12 满城春色宫墙柳" href="/record/2025w12/" />
   <LinkCard title="2025W13 乍暖还寒时候 最难将息" href="/record/2025w13/" />
   <LinkCard title="2025W14 试问卷帘人 却道海棠依旧" href="/record/2025w14/" />
+  <LinkCard title="2025W15 无奈云沉雨散" href="/record/2025w15/" />
+  <LinkCard title="2025W16 唯见月寒日暖 来煎人寿" href="/record/2025w16/" />
 </CardGrid>
 :::
 
