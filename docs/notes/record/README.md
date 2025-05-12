@@ -13,7 +13,8 @@ AJohn一直催我写周记，那他自己为什么不写？
 
 ::: card title="Archive Three：前路" icon="fluent-color:book-open-24"
 <CardGrid>
-  <LinkCard title="2025W17" href="/record/2025w17/" />
+  <LinkCard title="2025W17 如非必要 勿增实体" href="/record/2025w17/" />
+  <LinkCard title="2025W18-19 认识你自己" href="/record/2025w18w19/" />
 </CardGrid>
 :::
 
