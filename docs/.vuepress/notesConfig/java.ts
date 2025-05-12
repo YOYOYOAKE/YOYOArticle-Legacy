@@ -33,7 +33,8 @@ export default defineNoteConfig({
         {
           text: 'Char.3 Java 容器',
           items: [
-            'collections/Part-01.md',
+            'container/Part-01.md',
+            'container/Part-02.md',
           ]
         },
       ]
