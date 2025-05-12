@@ -35,6 +35,7 @@ export default defineNoteConfig({
           items: [
             'container/Part-01.md',
             'container/Part-02.md',
+            'container/Part-03.md',
           ]
         },
       ]
