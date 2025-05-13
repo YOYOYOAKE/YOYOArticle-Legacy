@@ -9,10 +9,10 @@ export default defineNoteConfig({
       link: 'README.md',
       items: [
         {
-          text: 'Char.1 PyTorch',
+          text: 'Char.1 基础知识',
           items: [
-            'pytorch/Part-01.md',
-            'pytorch/Part-02.md',
+            'basic/Part-01.md',
+            'basic/Part-02.md',
           ]
         },
       ]

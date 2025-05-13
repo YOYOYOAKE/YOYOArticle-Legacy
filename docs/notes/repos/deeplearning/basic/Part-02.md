@@ -1,7 +1,7 @@
 ---
 title: Part 2 梯度与自动微分
 createTime: 2025/05/13 14:50:55
-permalink: /deeplearning/pytorch/02/
+permalink: /deeplearning/basic/02/
 ---
 
 ## 1 导数和偏导数
