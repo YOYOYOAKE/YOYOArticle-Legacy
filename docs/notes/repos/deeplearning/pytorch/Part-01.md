@@ -1,7 +1,7 @@
 ---
 title: Part 1 PyTorch 张量操作
 createTime: 2025/05/12 17:23:02
-permalink: /deeplearning/basic/01/
+permalink: /deeplearning/pytorch/01/
 ---
 
 $n$维数组被称为张量。

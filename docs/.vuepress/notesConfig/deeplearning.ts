@@ -11,7 +11,8 @@ export default defineNoteConfig({
         {
           text: 'Char.1 PyTorch',
           items: [
-            'basic/Part-01.md',
+            'pytorch/Part-01.md',
+            'pytorch/Part-02.md',
           ]
         },
       ]
