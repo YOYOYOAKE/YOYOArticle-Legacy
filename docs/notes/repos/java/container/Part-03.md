@@ -130,7 +130,7 @@ System.out.println(set.last()); // TypeScript
 
 使用`.higher()`查找大于（>）指定元素的最小元素。
 
-使用`.floor()`查找小于（<）指定元素的最大元素。
+使用`.lower()`查找小于（<）指定元素的最大元素。
 
 ```java
 System.out.println(set.toString()); // [C++, Java, Python, TypeScript]
